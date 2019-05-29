@@ -1,6 +1,7 @@
 {
   "name": "blog-client",
   "version": "0.1.0",
+  "proxy": "http://localhost:3000",
   "private": true,
   "dependencies": {
     "react": "^16.8.6",
