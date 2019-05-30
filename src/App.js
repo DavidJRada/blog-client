@@ -80,11 +80,10 @@ class App extends React.Component {
         'Content-type': 'application/json'
       }
     }).then(updatedPost => {
-      this.getNotices()
+      this.getPosts()
     }).catch(error => console.error(error))
   }
   render() {
-    console.log(this.state.posts)
     return (
       <div className='container'>
         <Home />
