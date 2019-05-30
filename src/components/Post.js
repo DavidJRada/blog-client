@@ -24,7 +24,7 @@ class Post extends React.Component {
             <h3>{post.title}</h3>
             <p>{post.content}</p>
             <p>Likes: {post.likes}</p>
-            <p>Author: {post.user.name}</p>
+            <p>Author: {post.user_id}</p>
             <button onClick={() => handleDelete(post)}>X</button>
             <button onClick={this.toggleForm}>Edit This</button>
           </div>}

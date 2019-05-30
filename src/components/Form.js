@@ -7,9 +7,9 @@ class Form extends React.Component {
     this.state = {
       title: '',
       content: '',
-      author: '',
+      user_id: 0,
       likes: 0,
-      id: 0
+
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
@@ -19,7 +19,7 @@ class Form extends React.Component {
       this.setState({
         title: this.props.post.title,
         content: this.props.post.content,
-        author: this.props.post.user.name,
+        user_id: this.props.post.user_id,
         likes: this.props.post.likes,
         id: this.props.post.id
       })
@@ -36,14 +36,14 @@ class Form extends React.Component {
         title: this.state.title,
         content: this.state.content,
         likes: this.state.likes,
-        author: this.state.author,
+        user_id: this.state.user_id,
         id: this.state.id,
       }
     )
     this.setState({
       title: "",
       content: "",
-      author: '',
+      user_id: '',
       likes: 0
     })
     if(this.props.post) {
@@ -79,11 +79,11 @@ class Form extends React.Component {
         />
         <Input
           handleChange={this.handleChange}
-          name={'author'}
-          placeholder={'Post Author'}
+          name={'user_id'}
+          placeholder={'Post User'}
           type={'text'}
-          value={this.state.author}
-          id={'author'}
+          value={this.state.user_id}
+          id={'user_id'}
         />
 
         <input type='submit' value={this.props.post ? "update this notice" : "add this notice"} />

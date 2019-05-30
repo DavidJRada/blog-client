@@ -36,6 +36,7 @@ class App extends React.Component {
   }
   handleAdd(event, formInputs) {
     event.preventDefault()
+    console.log(formInputs)
     fetch('/posts', {
       body: JSON.stringify(formInputs),
       method: 'POST',
